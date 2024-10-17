@@ -29,7 +29,7 @@ const Header = () => {
   };
 
   return (
-    <RootWrapper>
+    <RootWrapper className={'sticky top-0 z-[999] w-full'}>
       <div className="bg-white py-4 xl:py-[28px] relative">
         {/* Mobile Header */}
         <div className="flex justify-between items-center xl:hidden px-4">

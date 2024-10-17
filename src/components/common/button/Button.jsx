@@ -14,6 +14,7 @@ const Button = ({
   name,
   link,
   className,
+  icon
 }) => {
   return (
     <Link
@@ -32,9 +33,9 @@ const Button = ({
     >
       {iconOnly ? (
         outline ? (
-          <Image src={circleRightGray} alt="circle" />
+          <Image src={icon} alt="circle" />
         ) : (
-          <Image src={circleRight} alt="circle" />
+          <Image src={icon} alt="circle" />
         )
       ) : textOnly ? (
         <p className="medium">{name}</p>
@@ -42,9 +43,9 @@ const Button = ({
         <>
           <p className="medium">{name}</p>
           {outline ? (
-            <Image src={circleRightDark} alt="circle" />
+            <Image src={icon} alt="circle" />
           ) : (
-            <Image src={circleRight} alt="circle" />
+            <Image src={icon} alt="circle" />
           )}
         </>
       )}

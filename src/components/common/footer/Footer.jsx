@@ -13,9 +13,9 @@ const Footer = () => {
         background:
           "linear-gradient(180deg, #FCEED5 0%, #FCEED5 100%, #FFE7BA 100%)",
       }}
-      className="rounded-t-[20px] lg:rounded-t-[40px] max-w-[1440px] mx-auto w-full"
+      className="rounded-t-[20px] lg:rounded-t-[40px]  mx-auto w-full "
     >
-      <RootWrapper className={`pt-[40px] pb-[20px]  `}>
+      <div className={`pt-[40px] pb-[20px] max-w-[1180px] mx-auto px-[16px] xl:px-[0px]`}>
         <div className=" pb-[40px] border-b-[1px] border-[#CCD1D2] mb-[36px] flex flex-col gap-[40px]">
           <div className=" rounded-[16px] p-[16px] md:p-[32px] lg:flex-row bg-[#003459] flex flex-col gap-[16px] max-w-[688px] lg:max-w-full w-full mx-auto ">
             <p className="bodyText1 text-white bold">
@@ -68,7 +68,7 @@ const Footer = () => {
             © 2022 Monito. All rights reserved.
           </p>
         </div>
-      </RootWrapper>
+      </div>
     </div>
   );
 };
