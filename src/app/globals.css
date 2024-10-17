@@ -5,4 +5,67 @@
 html {
   font-family: var(--poppins);
 }
- 
+
+.heading1 {
+  font-size: 46px;
+  line-height: 60px;
+  font-weight: 400;
+}
+
+.heading2 {
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: 400;
+}
+
+.heading3 {
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 400;
+}
+
+.heading4 {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+
+.bodyText1 {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+}
+.bodyText2 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.bodyText3 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.bodyText4 {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.bodyText5 {
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.bodyText6 {
+  font-size: 8px;
+  line-height: 12px;
+  font-weight: 400;
+}
+
+
+.bold {
+  font-weight: 700;
+}
+.medium {
+  font-weight: 500;
+}
