@@ -27,7 +27,7 @@ const Button = ({
       }  gap-[8px] ${iconLeft ? "flex-row-reverse" : "flex"} ${
         outline
           ? " border-[1.5px] border-[#003459] bg-white text-[#003459]"
-          : "bg-[#003459] text-white hover:bg-[#0078CD] active:bg-[#002A48] focus:bg-[#00528C] disabled:bg-[#CCD1D2] "
+          : "bg-[#003459] text-white hover:bg-[#0078CD] active:bg-[#002A48] focus:bg-[#00528C] disabled:bg-[#CCD1D2]"
       }`}
     >
       {iconOnly ? (
