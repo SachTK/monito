@@ -1,7 +1,7 @@
 import Breadcrumb from '@/components/common/breadcrumb/Breadcrumb';
 import React from 'react';
 import Hero from '../hero/Hero';
-import PupyCard from '@/components/common/card/PupyCard';
+import DogList from './DogList';
 
 
 
@@ -20,22 +20,7 @@ const DogCategoryTemplate = ({ breadcrumbItems, heroData, dogData ,title}) => {
       />
       
       {/* Dog List */}
-      <div className='flex flex-col gap-[19px]'>
-    <h2 className='text-[24px] leading-[36px] text-[#003459] bold'>{title} <span className='text-[14px] leading-[20px] text-[#667479]  medium'>52 papies</span></h2>
-    <div className='flex flex-row flex-wrap gap-[12px] lg:gap-[20px] justify-center'>
-
-      {dogData.map((dog) => (
-        <PupyCard key={dog.id} 
-        id={dog.id}
-        breed={dog.breed}
-        price={dog.price}
-        age={dog.age}
-        gender={dog.gender}
-        image={dog.image}
-        />
-      ))}
-    </div>
-      </div>
+      <DogList data={dogData} title={title}/>
 
     </div>
   );
