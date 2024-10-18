@@ -11,8 +11,8 @@ import FeaturedPupies from "@/components/common/featuredPupies/FeaturedPupies";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-[10px]">
-     <Header/>
+    <div className="flex flex-col">
+     <Header bgColor={'#FCEED5'}/>
      <Hero/>
     <FeaturedPupies subTitle="What's new?" title="Take a look at some of our pets" btn/>
      <Cta 

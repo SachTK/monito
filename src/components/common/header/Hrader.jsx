@@ -13,7 +13,7 @@ import close from "./assets/close.svg";
 import Button from "../button/Button";
 import Link from "next/link";
 
-const Header = ({noHeader=false}) => {
+const Header = ({noHeader=false,bgColor}) => {
   const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -30,8 +30,10 @@ const Header = ({noHeader=false}) => {
   };
 
   return (
-    <RootWrapper className={'sticky top-0 z-[999] w-full'}>
-      <div className="bg-white py-4 xl:py-[28px] relative">
+    <div style={{ backgroundColor: bgColor || 'white' }} className="sticky top-0 z-[999]">
+
+    <RootWrapper className={'w-full'}>
+      <div className=" py-4 xl:py-[28px] relative">
         {/* Mobile Header */}
         <div className={` justify-between items-center xl:hidden px-4 ${noHeader?'hidden':'flex'}`}>
           <button
@@ -172,7 +174,7 @@ const Header = ({noHeader=false}) => {
               Contact
             </a>
 
-            <div className="relative flex gap-[8px]">
+            <div className="relative flex gap-[8px] bg-white py-[12px] pr-[20px] pl-[16px] rounded-[46px]">
               <Image src={search} alt="Search" width={20} height={20} />
               <input
                 type="text"
@@ -255,6 +257,7 @@ const Header = ({noHeader=false}) => {
         )}
       </div>
     </RootWrapper>
+    </div>
   );
 };
 
