@@ -19,7 +19,7 @@ const Footer = () => {
         <div className=" pb-[40px] border-b-[1px] border-[#CCD1D2] mb-[36px] flex flex-col gap-[40px]">
           <div className=" rounded-[16px] p-[16px] md:p-[32px] lg:flex-row bg-[#003459] flex flex-col gap-[16px] max-w-[688px] lg:max-w-full w-full mx-auto ">
             <p className="bodyText1 text-white bold">
-              Register now so you don't miss our programs
+              Register now so you donot miss our programs
             </p>
             <div className="rounded-[14px] p-[12px] bg-white flex flex-col gap-[12px] lg:min-w-[75%]  xl:flex-row">
               <input
@@ -46,7 +46,7 @@ const Footer = () => {
             <div className="flex gap-[40px] justify-center">
               {socialLinks.map((val, index) => (
                 <Link key={index} href={val.link}>
-                  <Image src={val.icon} />
+                  <Image src={val.icon} alt="image"/>
                 </Link>
               ))}
             </div>

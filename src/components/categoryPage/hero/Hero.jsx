@@ -19,7 +19,7 @@ const Hero = ({ title, subTitle, desc, image }) => {
       </div>
 
       <div className="relative z-30 mt-[-40px]"> 
-        <Image src={image} width={480} height={200} className="relative z-30 w-full  lg:w-[650px]" />
+        <Image src={image} width={480} height={200} className="relative z-30 w-full  lg:w-[650px]" alt="image"/>
       </div>
 
      

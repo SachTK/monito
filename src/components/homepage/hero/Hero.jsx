@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from 'next/image'; // Assuming you're using Next.js and next/image for optimization
-import homeHeroImg from './assets/homeHeroImg.png'; // Your image path
+import Image from 'next/image'; 
+import homeHeroImg from './assets/homeHeroImg.png'; 
 import RootWrapper from '@/components/common/rootWrapper/RootWrapper';
 import Button from '@/components/common/button/Button';
 import intro from './assets/intro.svg';
@@ -20,7 +20,7 @@ const Hero = () => {
            </div>
       </div>
       <div className='z-20'>
-        <Image src={homeHeroImg} width={480} height={380} className=' h-[380px] w-[650px]' />
+        <Image src={homeHeroImg} width={480} height={380} className=' h-[380px] w-[650px]' alt='image'/>
       </div>
       <div className={`bg-[#F7DBA7]  top-[347px]   lg:top-[167px] left-[123px] lg:left-[796px] 
         rotate-25  h-[517px] w-[522px]  rounded-[99px] absolute z-10`} />

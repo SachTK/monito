@@ -6,7 +6,7 @@ const PupyCard = ({id, breed,gender,age,price,image,category }) => {
   return (
     
     <Link className='max-w-[185px] lg:max-w-[280px] rounded-[12px] p-[8px] bg-[#FDFDFD] shadow-md flex flex-col gap-[8px]'   href={`/dog/${category}/${id}`}>
-      <Image src={image} width={185} height={200} className="object-cover rounded-[12px] lg:w-[264px]"  />
+      <Image src={image} width={185} height={200} className="object-cover rounded-[12px] lg:w-[264px]" alt='icon' />
       <div className='flex flex-col gap-[8px] p-[4px]'>
         <p className='bodyText2 bold text-[#00171F]'>{id} - {breed}</p>
         <div className='flex flex-col gap-[4px] lg:flex-row'>
