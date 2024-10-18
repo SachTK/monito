@@ -1,7 +1,4 @@
 import React from "react";
-import circleRight from "./assets/circle_right.svg";
-import circleRightDark from "./assets/circle_right_dark.svg";
-import circleRightGray from "./assets/circle_right_gray.svg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -27,7 +24,7 @@ const Button = ({
           : "rounded-[57px] px-[28px] py-[14px] flex items-center bodyText2"
       }  gap-[8px] ${iconLeft ? "flex-row-reverse" : "flex"} ${
         outline
-          ? " border-[1.5px] border-[#003459] bg-white text-[#003459]"
+          ? " border-[1.5px] border-[#003459]  text-[#003459]"
           : "bg-[#003459] text-white hover:bg-[#0078CD] active:bg-[#002A48] focus:bg-[#00528C] disabled:bg-[#CCD1D2]"
       }`}
     >

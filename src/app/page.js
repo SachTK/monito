@@ -1,9 +1,14 @@
 import Button from "@/components/common/button/Button";
 import Footer from "@/components/common/footer/Footer";
 import Header from "@/components/common/header/Hrader";
+import Cta from "@/components/homepage/cta/Cta";
 import FeaturedAnimals from "@/components/homepage/featuredAnimals/FeaturedAnimals";
+import FeaturedProducts from "@/components/homepage/featuredProducts/FeaturedProducts";
 import Hero from "@/components/homepage/hero/Hero";
-import Image from "next/image";
+import Sellers from "@/components/homepage/sellers/Sellers";
+import homeCta1Image from '../components/homepage/cta/assets/homeCta1Image.png'
+import dogPalm from '../components/homepage/cta/assets/dogPalm.png'
+import Blog from "@/components/homepage/blog/Blog";
 
 export default function Home() {
   return (
@@ -11,6 +16,20 @@ export default function Home() {
      <Header/>
      <Hero/>
      <FeaturedAnimals/>
+     <Cta 
+     image={homeCta1Image}
+     title={'One More Friend'} 
+     subTitle={'Thousands More Fun!'} 
+     desc={'Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!'}/>
+     <FeaturedProducts/>
+     <Sellers/>
+     <Cta
+     image={dogPalm} 
+     cta2 
+     title={'Adoption'} 
+     subTitle={'We need help. so do they.'} 
+     desc={'Adopt a pet and give it a home, it will be love you back unconditionally.'}/>
+     <Blog/>
      <Footer/>
     </div>
   );

@@ -1,38 +1,38 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import PupyCard from "@/components/common/card/PupyCard";
 import RootWrapper from "@/components/common/rootWrapper/RootWrapper";
-import { fetchPuppies } from "@/api/api";
+import { fetchProducts } from "@/api/api";
 import Button from "@/components/common/button/Button";
 import rightArrowOutline from "./assets/rightArrowOutline.svg";
+import ProductCard from "@/components/common/card/ProductCard";
 
-const FeaturedAnimals = () => {
-  const [puppies, setPuppies] = useState([]);
+const FeaturedProducts = () => {
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true); // Optional: to show a loader while fetching
 
   useEffect(() => {
-    const getPuppies = async () => {
+    const getProducts = async () => {
       try {
-        const data = await fetchPuppies();
-        setPuppies(data);
+        const data = await fetchProducts();
+        setProducts(data);
       } catch (error) {
-        console.error("Error loading puppies:", error);
+        console.error("Error loading products:", error);
       } finally {
         setLoading(false);
       }
     };
 
-    getPuppies();
+    getProducts();
   }, []);
 
   return (
     <RootWrapper className={"py-[40px] lg:py-[60px]"}>
       <div className="flex justify-between md:pb-[28px]">
         <div>
-          <p className="bodyText3 medium">What's new?</p>
-          <p className="bodyText1 bold text-[#003459]">
-            Take a look at some of our pets
+          <p className="bodyText3 medium">
+            Hard to choose right products for your pets?
           </p>
+          <p className="bodyText1 bold text-[#003459]">Our Products</p>
         </div>
         <Button
           name="View more"
@@ -47,16 +47,17 @@ const FeaturedAnimals = () => {
         {loading ? (
           <p>Loading...</p>
         ) : (
-          puppies.map((puppy) => (
-            <PupyCard
-              key={puppy.id}
-              id={puppy.id}
-              breed={puppy.breed}
-              gender={puppy.gender}
-              age={puppy.age}
-              price={puppy.price}
-              image={puppy.image}
-            />
+            products.map((product) => (
+          <ProductCard
+            name={product.name}
+            price={product.price}
+            image={product.image}
+            key={product.id}
+            desc={product.description}
+            product={product.product}
+            size={product.size}
+
+          />
           ))
         )}
       </div>
@@ -71,4 +72,4 @@ const FeaturedAnimals = () => {
   );
 };
 
-export default FeaturedAnimals;
+export default FeaturedProducts;

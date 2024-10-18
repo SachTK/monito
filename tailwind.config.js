@@ -11,6 +11,14 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      rotate: {
+        '6': '6deg',
+        '25': '25deg',
+        '28': '28deg',
+        '53': '53deg',
+        '55': '55deg',
+        '71': '71deg',
+      }
     },
   },
   plugins: [],
