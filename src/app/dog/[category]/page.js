@@ -9,6 +9,7 @@ export default async function DogCategoryPage({ params }) {
 
   const { category } = params;
   const { hero, data: dogData } = await getCategoryData(category); 
+  console.log(category)
 
  
   const breadcrumbItems = [

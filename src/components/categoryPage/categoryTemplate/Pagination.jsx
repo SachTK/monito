@@ -41,7 +41,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       >
         <Image src={backArroww} alt="nextArrow" width={20} height={20} />
       </button>
-      {renderPageNumbers().slice(0, 4)} {/* First few pages */}
+      {renderPageNumbers().slice(0, 4)} 
       <span>...</span>
       <button
         onClick={() => onPageChange(totalPages)}

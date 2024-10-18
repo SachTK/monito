@@ -19,7 +19,6 @@ const DogCategoryTemplate = ({ breadcrumbItems, heroData, dogData ,title}) => {
         image={heroData.image} 
       />
       
-      {/* Dog List */}
       <DogList data={dogData} title={title}/>
 
     </div>

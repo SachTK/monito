@@ -160,6 +160,7 @@ const DogList = ({ data, title, count }) => {
               age={dog.age}
               gender={dog.gender}
               image={dog.image}
+              category={title}
             />
           ))}
         </div>

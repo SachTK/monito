@@ -1,21 +1,20 @@
-import Button from "@/components/common/button/Button";
 import Footer from "@/components/common/footer/Footer";
 import Header from "@/components/common/header/Hrader";
 import Cta from "@/components/homepage/cta/Cta";
-import FeaturedAnimals from "@/components/homepage/featuredAnimals/FeaturedAnimals";
 import FeaturedProducts from "@/components/homepage/featuredProducts/FeaturedProducts";
 import Hero from "@/components/homepage/hero/Hero";
 import Sellers from "@/components/homepage/sellers/Sellers";
 import homeCta1Image from '../components/homepage/cta/assets/homeCta1Image.png'
 import dogPalm from '../components/homepage/cta/assets/dogPalm.png'
 import Blog from "@/components/homepage/blog/Blog";
+import FeaturedPupies from "@/components/common/featuredPupies/FeaturedPupies";
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-[10px]">
      <Header/>
      <Hero/>
-     <FeaturedAnimals/>
+    <FeaturedPupies subTitle="What's new?" title="Take a look at some of our pets" btn/>
      <Cta 
      image={homeCta1Image}
      title={'One More Friend'} 

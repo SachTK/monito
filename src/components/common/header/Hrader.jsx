@@ -11,8 +11,9 @@ import logo from "./assets/logo.svg";
 import hamburgerMenu from "./assets/hamburgerMenu.svg";
 import close from "./assets/close.svg";
 import Button from "../button/Button";
+import Link from "next/link";
 
-const Header = () => {
+const Header = ({noHeader=false}) => {
   const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -32,7 +33,7 @@ const Header = () => {
     <RootWrapper className={'sticky top-0 z-[999] w-full'}>
       <div className="bg-white py-4 xl:py-[28px] relative">
         {/* Mobile Header */}
-        <div className="flex justify-between items-center xl:hidden px-4">
+        <div className={` justify-between items-center xl:hidden px-4 ${noHeader?'hidden':'flex'}`}>
           <button
             className="p-2"
             onClick={toggleMobileMenu}
@@ -46,9 +47,9 @@ const Header = () => {
             />
           </button>
 
-          <div className="absolute left-1/2 -translate-x-1/2">
+          <Link className="absolute left-1/2 -translate-x-1/2" href={'/'}>
             <Image src={logo} alt="Monito" width={100} height={50} />
-          </div>
+          </Link>
 
           <button
             className="p-2"
@@ -80,9 +81,9 @@ const Header = () => {
 
         {/* Desktop Layout */}
         <div className="hidden xl:flex justify-between items-center">
-          <div className="flex items-center">
+          <Link className="flex items-center" href={'/'}>
             <Image src={logo} alt="Monito" width={100} height={50} />
-          </div>
+          </Link>
 
           <nav className="flex space-x-8 items-center">
             <a href="#" className="text-gray-700 hover:text-blue-600">
@@ -101,7 +102,9 @@ const Header = () => {
                 <div className="absolute left-0 right-7 top-full mt-2 bg-white py-[34px] px-[40px] shadow-lg rounded-[12px] max-w z-50 flex justify-between">
                   <div className="flex flex-row gap-[70px]">
                     <div>
+                      <Link href={'/dog/popular-dog'}>
                       <h4 className="font-semibold mb-[11px]">Popular →</h4>
+                      </Link>
                       <div className="flex gap-[38px]">
                         <ul className="space-y-2 bodyText3">
                           <li>Yorkshire Terrier</li>
@@ -123,7 +126,9 @@ const Header = () => {
                     </div>
 
                     <div>
+                      <Link href={'/dog/large-dog'}>
                       <h4 className="font-semibold mb-[11px]">Large Dog →</h4>
+                      </Link>
                       <ul className="space-y-2 bodyText3">
                         <li>Akita</li>
                         <li>Alaskan Malamute</li>
@@ -135,7 +140,9 @@ const Header = () => {
                     </div>
 
                     <div>
+                      <Link href={'/dog/small-dog'}>
                       <h4 className="font-semibold mb-[11px]">Small Dog →</h4>
+                      </Link>
                       <ul className="space-y-2 bodyText3">
                         <li>Beagle</li>
                         <li>Boston Terrier</li>
