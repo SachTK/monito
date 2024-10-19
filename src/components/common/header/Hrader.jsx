@@ -13,7 +13,7 @@ import close from "./assets/close.svg";
 import Button from "../button/Button";
 import Link from "next/link";
 
-const Header = ({noHeader=false,bgColor}) => {
+const Header = ({noHeader=false,bgColor , rect=false}) => {
   const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -31,8 +31,7 @@ const Header = ({noHeader=false,bgColor}) => {
 
   return (
     <div style={{ backgroundColor: bgColor || 'white' }} className="sticky top-0 z-[999]">
-
-    <RootWrapper className={'w-full'}>
+    <RootWrapper className={'w-full'} >
       <div className=" py-4 xl:py-[28px] relative">
         {/* Mobile Header */}
         <div className={` justify-between items-center xl:hidden px-4 ${noHeader?'hidden':'flex'}`}>
@@ -51,6 +50,7 @@ const Header = ({noHeader=false,bgColor}) => {
 
           <Link className="absolute left-1/2 -translate-x-1/2" href={'/'}>
             <Image src={logo} alt="Monito" width={100} height={50} />
+            
           </Link>
 
           <button
@@ -83,8 +83,14 @@ const Header = ({noHeader=false,bgColor}) => {
 
         {/* Desktop Layout */}
         <div className="hidden xl:flex justify-between items-center">
-          <Link className="flex items-center" href={'/'}>
-            <Image src={logo} alt="Monito" width={100} height={50} />
+          <Link className="flex items-center relative" href={'/'}>
+            <Image src={logo} alt="Monito" width={100} height={50} className="z-30" />
+            {rect && <div
+          className={`hidden lg:block bg-[#F7DBA7] top-[18px] left-[119px] lg:top-[-651px] lg:left-[-392px]
+        rotate-25  h-[635px] w-[635px]  rounded-[99px] absolute  `}
+        style={{ zIndex: 10 }}
+        />}
+            
           </Link>
 
           <nav className="flex space-x-8 items-center">

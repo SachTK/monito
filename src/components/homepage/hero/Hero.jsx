@@ -5,9 +5,15 @@ import RootWrapper from "@/components/common/rootWrapper/RootWrapper";
 import Button from "@/components/common/button/Button";
 import intro from "./assets/intro.svg";
 
+
 const Hero = () => {
   return (
     <div className="bg-[#FCEED5] ">
+        {/* <div
+          className={`hidden lg:block bg-[#F7DBA7] top-[18px] left-[119px] lg:top-[-602px] lg:left-[-284px]
+        rotate-25  h-[635px] w-[635px]  rounded-[99px] absolute  `}
+        style={{ zIndex: 1000 }}
+        /> */}
       <RootWrapper
         className={
           "flex  flex-col lg:flex-row  lg:pt-[20px] overflow-hidden relative"
@@ -81,6 +87,7 @@ const Hero = () => {
           className={`hidden lg:block bg-[#F7DBA7] top-[18px] left-[119px] 
         rotate-25  h-[67px] w-[67px]  rounded-[20px] absolute z-10`}
         />
+      
       </RootWrapper>
     </div>
   );
