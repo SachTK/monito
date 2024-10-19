@@ -1,5 +1,4 @@
 import React from "react";
-import RootWrapper from "../rootWrapper/RootWrapper";
 import logo from "./assets/logo.svg";
 import Image from "next/image";
 import Link from "next/link";

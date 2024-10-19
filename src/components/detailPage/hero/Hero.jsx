@@ -36,7 +36,7 @@ const Hero = ({ image,breed, gender, age, price, images, category, id }) => {
   return (
     <div
       className={
-        "rounded-[20px] border-[1px] border-[#EBEEEF] py-[22px] md:px-[20px] xl:max-w-[1180px] mx-auto flex  gap-[34px]   flex-col  xl:flex-row"
+        "rounded-[20px] border-[1px] border-[#EBEEEF] pb-[22px] lg:pt-[20px] md:px-[20px] xl:max-w-[1180px] mx-auto flex  gap-[34px]   flex-col  xl:flex-row"
       }
     >
       <div>
@@ -85,7 +85,7 @@ const Hero = ({ image,breed, gender, age, price, images, category, id }) => {
         </div>
       </div>
 
-      <div className="max-w-[517px] w-full mx-[20px] lg:mx-0">
+      <div className="px-[20px] w-full  lg:px-0">
         <Breadcrumb items={breadcrumbs} separator=">" className="mb-4" />
         <div>
           <p className="text-[14px] leading-[20px] text-[#99A2A5] medium">
@@ -97,7 +97,7 @@ const Hero = ({ image,breed, gender, age, price, images, category, id }) => {
           <p className="text-[20px] leading-[32px] text-[#002A48] bold mt-[6px]">
             {price}
           </p>
-          <div className="flex gap-[18px] mt-[18px]">
+          <div className="flex gap-[8px] lg:gap-[18px]  mt-[18px]">
             <Button
               name={"Contact Us"}
               link={"#"}

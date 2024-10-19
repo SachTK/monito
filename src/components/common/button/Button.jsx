@@ -30,9 +30,9 @@ const Button = ({
     >
       {iconOnly ? (
         outline ? (
-          <Image src={icon} alt="circle" />
+          <Image src={icon} alt="circle" width={15} />
         ) : (
-          <Image src={icon} alt="circle" />
+          <Image src={icon} alt="circle" width={15} />
         )
       ) : textOnly ? (
         <p className="medium">{name}</p>
@@ -40,9 +40,9 @@ const Button = ({
         <>
           <p className="medium">{name}</p>
           {outline ? (
-            <Image src={icon} alt="circle" />
+            <Image src={icon} alt="circle"  width={15}/>
           ) : (
-            <Image src={icon} alt="circle" />
+            <Image src={icon} alt="circle" width={15} />
           )}
         </>
       )}
