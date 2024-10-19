@@ -7,28 +7,30 @@ import Footer from '@/components/common/footer/Footer';
 
 export default async function DogCategoryPage({ params }) {
 
-  const { category } = params;
-  const { hero, data: dogData } = await getCategoryData(category); 
-  console.log(category)
+    if (!params || !params.category) {
+      throw new Error('Category parameter is missing.');
+    }
 
- 
-  const breadcrumbItems = [
-    { label: 'Home', link: '/' },
-    { label: 'Dogs', link: '/dog' },
-    { label: category.replace(/-/g, ' ') }, 
-  ];
+    const { category } = params;
+    const { hero, data: dogData } = await getCategoryData(category); 
 
-  return (
-    <>
-    <Header/>
-    <DogCategoryTemplate
-      breadcrumbItems={breadcrumbItems}
-      heroData={hero}
-      dogData={dogData}
-      title={category.replace(/-/g, ' ')}
-    />
-    <Footer/>
-    </>
-    
-  );
+    const breadcrumbItems = [
+      { label: 'Home', link: '/' },
+      { label: 'Dogs', link: '/dog' },
+      { label: category.replace(/-/g, ' ') },
+    ];
+
+    return (
+      <>
+        <Header />
+        <DogCategoryTemplate
+          breadcrumbItems={breadcrumbItems}
+          heroData={hero}
+          dogData={dogData}
+          title={category.replace(/-/g, ' ')}
+        />
+        <Footer />
+      </>
+    );
+  
 }

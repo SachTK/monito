@@ -12,7 +12,7 @@ const Cta = ({title, cta2=false, image , desc , subTitle}) => {
       <section className={`relative ${cta2 ? "bg-[#FFB775] lg:flex-row lg:pl-[40px]" : "bg-[#003459] lg:flex-row-reverse pt-[40px] lg:pr-[40px]"} flex flex-col items-center lg:items-start rounded-[20px] overflow-hidden `}>
 
 
-        <div className={`  ${cta2 ? "bg-[#fec792] top-[-354px] lg:top-[233px] right-[-81px] lg:right-0 lg:left-[730px] rotate-12 lg:rotate-53 " : "bg-[#FCEED5] top-[-354px] lg:top-[-284px] right-[-81px] lg:right-0 lg:left-[600px] rotate-12 lg:rotate-25   "}   h-[635px] w-[605px] rounded-[75px] lg:rounded-[99px] lg:w-[782px] absolute  z-10`}/>
+        <div className={`  ${cta2 ? "bg-[#fec792] top-[-354px] lg:top-[233px] right-[-81px] lg:right-0 lg:left-[730px] rotate-12 lg:rotate-53 " : "bg-[#FCEED5] top-[-354px] lg:top-[-284px] right-[-81px]  md:top-[-245px] md:right-[-8px] lg:right-0 lg:left-[600px] rotate-12 lg:rotate-25   "}   h-[635px] w-[605px] rounded-[75px] lg:rounded-[99px] lg:w-[782px] absolute  z-10`}/>
         <div className={`${cta2 ? "bg-[#FCEED5] top-[550px] right-[-71px] lg:right-0 lg:left-[-207px] lg:top-[-296px] rotate-55  " : "bg-[#002A48] top-[550px] right-[-71px] lg:right-0 lg:left-[-207px] lg:top-[162px] rotate-28 "} h-[635px] w-[605px] lg:w-[787px] lg:h-[767px] rounded-[99px] absolute  z-10`}/>
         
         {/* Left Text Section */}
@@ -44,7 +44,6 @@ const Cta = ({title, cta2=false, image , desc , subTitle}) => {
             </p>
           </div>
           
-          {/* Buttons */}
           <div className={`flex flex-row justify-center ${cta2 ? 'lg:justify-start lg:flex-row-reverse self-start ' : 'lg:justify-end'} gap-[12px]`}>
             <Button name='View Intro' outline icon={intro} link='#' className={''}/>
             <Button name='Explore Now' link='#' textOnly/>
